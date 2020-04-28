@@ -1,5 +1,5 @@
 import React from "react";
-const Navbar = () => {
+const Header = () => {
   return (
     <nav class="bg-gray-900 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
       <div class="flex flex-wrap items-center">
@@ -110,4 +110,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
