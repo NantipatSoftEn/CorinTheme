@@ -30,7 +30,7 @@ const Content = () => {
           icon="fas fa-users fa-2x fa-inverse"
           iconColor="rounded-full p-5 bg-orange-600"
         />
-        {/* <Graph/> */}
+        <Graph/>
       </div>
     </div>
   );
