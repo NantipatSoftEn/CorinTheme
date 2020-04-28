@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Content from "./components/Content";
 function App() {
   return (
-    <h1 className="text-4xl font-bold text-center text-blue-500">
-    Hello Tailwind!
-  </h1>
-
+    <div className="bg-gray-900 font-sans leading-normal tracking-normal mt-12">
+      <Navbar />
+      <Content />
+    </div>
   );
 }
 
