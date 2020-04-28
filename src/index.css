@@ -1,8 +1,10 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Niramit:wght@500&display=swap');
 @font-face {
   font-family: "Comnic Mono";
   src: url("./asset/fonts/ComicMono.ttf");
 }
-
-.body  {
-  font-family: "Comnic Mono";
+body {
+  font-family: 'Comnic Mono','Niramit', sans-serif;
 }

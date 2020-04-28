@@ -578,6 +578,22 @@ video {
   height: auto;
 }
 
+@font-face {
+  font-family: "Comnic Mono";
+
+  font-weight: 400;
+
+  src: url(../fonts/ComicMono.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: "Sarabun-Medium";
+
+  font-weight: 500;
+
+  src: url(../fonts/Sarabun-Medium.ttf) format("ttf");
+}
+
 .container {
   width: 100%;
 }
