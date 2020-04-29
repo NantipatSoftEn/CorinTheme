@@ -12,12 +12,12 @@ const Forms = () => {
             ชื่อต้น
           </label>
           <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            class="p-1 shadow rounded-lg bg-gray-100 outline-none focus:bg-gray-200"
             id="grid-first-name"
             type="text"
-            placeholder="Jane"
+            placeholder="อาร์มมี่"
           />
-          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+          {/* <p class="text-red-500 text-xs italic">Please fill out this field.</p> */}
         </div>
         <div class="w-full md:w-1/4 px-3">
           <label
@@ -27,7 +27,7 @@ const Forms = () => {
             Last Name
           </label>
           <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            class="p-1 shadow rounded-lg bg-gray-100 outline-none focus:bg-gray-200"
             id="grid-last-name"
             type="text"
             placeholder="Doe"
@@ -43,7 +43,7 @@ const Forms = () => {
             Password
           </label>
           <input
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            class="p-1 shadow rounded-lg bg-gray-100 outline-none focus:bg-gray-200"
             id="grid-password"
             type="password"
             placeholder="******************"
