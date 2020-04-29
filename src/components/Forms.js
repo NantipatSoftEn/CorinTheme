@@ -1,40 +1,15 @@
 import React from "react";
-
+import FormName from "./FormName";
 const Forms = () => {
   return (
-    <form class="mx-5">
-      <div class="flex flex-wrap  mb-6 mt-2">
-        <div class="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-          <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold text-xs mb-2"
-            for="grid-first-name"
-          >
-            ชื่อต้น
-          </label>
-          <input
-            class="p-1 shadow rounded-lg bg-gray-100 outline-none focus:bg-gray-200"
-            id="grid-first-name"
-            type="text"
-            placeholder="อาร์มมี่"
-          />
-          {/* <p class="text-red-500 text-xs italic">Please fill out this field.</p> */}
-        </div>
-        <div class="w-full md:w-1/4 px-3">
-          <label
-            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            for="grid-last-name"
-          >
-            Last Name
-          </label>
-          <input
-            class="p-1 shadow rounded-lg bg-gray-100 outline-none focus:bg-gray-200"
-            id="grid-last-name"
-            type="text"
-            placeholder="Doe"
-          />
-        </div>
+    <form class="mb-5">
+
+      <div class="flex flex-wrap mb-6 mt-3">
+        <FormName label="ชื่อต้น" test="อามมี่" />
+        <FormName label="นามสกุล" test="inw" />
+        <FormName label="ชื่อเล่น" test="ทดลอง" />
       </div>
-      <div class="flex flex-wrap  mb-6">
+      <div class="flex flex-wrap  mb-6 mt-3">
         <div class="w-full px-3">
           <label
             class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
