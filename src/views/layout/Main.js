@@ -12,9 +12,9 @@ const Main = (props) => {
           <div class="bg-blue-800 p-2 shadow text-xl text-white">
             <h3 class="pl-2">Analytics</h3>
           </div>
-          <div class="flex flex-wrap">
+       
             {props.children}
-          </div>
+        
         </div>
       </div>
     </div>
