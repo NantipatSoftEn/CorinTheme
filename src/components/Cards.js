@@ -23,7 +23,7 @@ const Cards = () => {
         <Card
           title="สถานะระบบ"
           value="กำลังทดสอบ"
-          color="border-orange-600"ญ
+          color="border-orange-600"
           icon="fas fa-users fa-2x fa-inverse"
           iconColor="rounded-full p-5 bg-orange-600"
         />
