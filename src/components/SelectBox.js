@@ -1,8 +1,6 @@
 import React from "react";
 
 const SelectBox = ({ label, test }) => {
-  console.log(`testfuck`, test[0]);
-  console.log(`label`, label);
   return (
     <div class="w-full md:w-1/5 px-3 md:mb-0 mt-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold text-xs mb-2">

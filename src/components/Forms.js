@@ -1,8 +1,8 @@
 import React from "react";
 import Form from "./Form";
-import SelectBox from "./SelectBox"
-import {mentors} from './data';
-const Forms = () => {  
+import SelectBox from "./SelectBox";
+import { mentors, groups, status } from "./data";
+const Forms = () => {
   return (
     <form class="mb-5">
       <div class="flex flex-wrap mb-6 mt-3">
@@ -23,9 +23,9 @@ const Forms = () => {
         <Form label="ทำที่ไหน" test="ไม่บอกหรอก ฮิฮิ" type="text" />
       </div>
       <div class="flex flex-wrap  mb-2">
-        <SelectBox label="พี่เลี้ยง" test={mentors}/>
-        {/* <SelectBox label="กลุ่มแคร์" />
-        <SelectBox label="ระดับความเชื่อ" /> */}
+        <SelectBox label="พี่เลี้ยง" test={mentors} />
+        <SelectBox label="กลุ่มแคร์" test={groups}/>
+        <SelectBox label="ระดับความเชื่อ" test={status}/>
       </div>
     </form>
   );
