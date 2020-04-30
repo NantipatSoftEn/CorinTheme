@@ -30,6 +30,17 @@ const Row = ({ img, name, role, date, status, color }) => {
             <span class="relative">{status}</span>
           </span>
         </td>
+        <td class="px-5 py-5 bg-white text-sm">
+        <button class="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            ดูข้อมูล
+          </button>{" "}
+          <button class="bg-yellow-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            แก้ไข
+          </button>{" "}
+          <button class="bg-red-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+            ลบ
+          </button>
+        </td>
       </tr>
     </React.Fragment>
   );
