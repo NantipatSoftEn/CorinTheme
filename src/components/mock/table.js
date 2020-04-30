@@ -32,5 +32,3 @@ export const data = [
     color: "bg-red-200",
   },
 ];
-
-data.map((keyName, i) => console.log(keyName.name));

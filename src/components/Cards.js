@@ -5,7 +5,7 @@ const Cards = () => {
   return (
     <React.Fragment>
       <Title name="Card" />
-      <div class="flex flex-wrap">
+      <div className="flex flex-wrap">
         <Card
           title="จำนวนผู้ใช้ทั้งหมด"
           value="777"
