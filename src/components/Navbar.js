@@ -8,7 +8,7 @@ const Navbar = () => {
       <div class="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
         <ul class="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
         <Menu href="form" name="Form" icon="fas fa-tasks pr-0 md:pr-3"  / >
-        <Menu href="#" name="Messages" icon="fa fa-envelope pr-0 md:pr-3" / >
+        <Menu href="card" name="Card" icon="fa fa-envelope pr-0 md:pr-3" / >
         <Menu href="#" name="Analytics" icon="fas fa-chart-area pr-0 md:pr-3" / >
         <Menu href="#" name="Payments" icon="fa fa-wallet pr-0 md:pr-3" / >
         </ul>
