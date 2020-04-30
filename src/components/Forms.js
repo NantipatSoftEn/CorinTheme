@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "./Form";
 import SelectBox from "./SelectBox";
+import DateForm from "./DateForm";
 import { mentors, groups, status } from "./data";
 const Forms = () => {
+  const [startDate, setStartDate] = useState(new Date());
   return (
     <form class="mb-5">
       <div class="flex flex-wrap mb-6 mt-3">
@@ -18,14 +20,15 @@ const Forms = () => {
         <Form label="ความสามารถพิเศษ" test="ว่ายน้ำกลับหัว" type="text" />
       </div>
       <div class="flex flex-wrap  mb-2">
+        <SelectBox label="พี่เลี้ยง" test={mentors} />
+        <SelectBox label="กลุ่มแคร์" test={groups} />
+        <SelectBox label="ระดับความเชื่อ" test={status} />
+        <DateForm label="วันที่เชื่อ" />
+      </div>
+      <div class="flex flex-wrap  mb-2">
         <Form label="อาชีพ" test="คนขายยา" type="text" />
         <Form label="รายได้" test="100000" type="number" />
         <Form label="ทำที่ไหน" test="ไม่บอกหรอก ฮิฮิ" type="text" />
-      </div>
-      <div class="flex flex-wrap  mb-2">
-        <SelectBox label="พี่เลี้ยง" test={mentors} />
-        <SelectBox label="กลุ่มแคร์" test={groups}/>
-        <SelectBox label="ระดับความเชื่อ" test={status}/>
       </div>
     </form>
   );
