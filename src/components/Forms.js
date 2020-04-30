@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import Form from "./shared/Form";
 import SelectBox from "./SelectBox";
 import DateForm from "./shared/DateForm";
+import Title from "./shared/Title";
 import { mentors, groups, status } from "./data";
 
 const Forms = () => {
-  const [startDate, setStartDate] = useState(new Date());
   return (
     <React.Fragment>
-      <div class="bg-blue-800 p-2 shadow text-xl text-white">
-        <h3 class="pl-2">Form</h3>
-      </div>
+      <Title name="Form" />
       <form class="mb-5">
         <div class="flex flex-wrap mb-6 mt-3">
           <Form label="ชื่อต้น" test="อามมี่" type="text" />
