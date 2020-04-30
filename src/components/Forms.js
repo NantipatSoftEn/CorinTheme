@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Form from "./shared/Form";
-import SelectBox from "./SelectBox";
+import SelectBox from "./shared/SelectBox";
 import DateForm from "./shared/DateForm";
 import Title from "./shared/Title";
-import { mentors, groups, status } from "./data";
+import { mentors, groups, status } from "./mock/option";
 
 const Forms = () => {
   return (
