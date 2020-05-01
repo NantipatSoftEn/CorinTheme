@@ -77,10 +77,9 @@ const Header = () => {
                 <div
                   className={
                     "dropdownlist absolute bg-gray-900 text-white right-0 mt-3 p-3 overflow-auto z-30 " +
-                    +(visible ? null : "invisible")
+                    (visible ? "" : "invisible")
                   }
                 >
-                  
                   <a
                     href="#"
                     className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
