@@ -5,14 +5,24 @@ import DateForm from "./shared/DateForm";
 import Title from "./shared/Title";
 import { mentors, groups, status } from "./mock/option";
 
+
+
 const Forms = () => {
+  const [name, setName] = useState("");
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    console.log(`Submitting Name ${name}`);
+    
+    alert(`Submitting Name ${name}`)
+}
+
   return (
     <React.Fragment>
       <Title name="Form" />
-      <form className="mx-8">
+      <form className="mx-8"onSubmit={handleSubmit} > 
         <p className="mt-8 font-bold">ข้อมูลทั่วไป</p>
         <div className="flex flex-wrap mb-6 mt-3">
-          <Form label="ชื่อต้น" test="อามมี่" type="text" />
+          <Form label="ชื่อต้น" test={name} type="text"   onChange={e => setName(e.target.value)}/>
           <Form label="นามสกุล" test="inw" type="text" />
           <Form label="ชื่อเล่น" test="ทดลอง" type="text" />
           <Form label="อายุ" test="18" type="number" />
@@ -41,9 +51,7 @@ const Forms = () => {
             <button className="bg-red-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
               เคลียร์ข้อมูล
             </button> {" "}
-            <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-              เพิ่มข้อมูล
-            </button>
+            <input type="submit" value="Submit" />
           </div>
         </div>
       </form>
