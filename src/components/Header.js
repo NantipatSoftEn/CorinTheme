@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import MenuUserPanel from "./shared/MenuUserPanel";
 const Header = () => {
   const [visible, setVisible] = useState(false);
   return (
@@ -80,25 +80,9 @@ const Header = () => {
                     (visible ? "" : "invisible")
                   }
                 >
-                  <a
-                    href="#"
-                    className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
-                  >
-                    <i className="fa fa-user fa-fw"></i> Profile
-                  </a>
-                  <a
-                    href="#"
-                    className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
-                  >
-                    <i className="fa fa-cog fa-fw"></i> Settings
-                  </a>
-                  <div className="border border-gray-800"></div>
-                  <a
-                    href="#"
-                    className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"
-                  >
-                    <i className="fas fa-sign-out-alt fa-fw"></i> Log Out
-                  </a>
+                  <MenuUserPanel href="#" name="Profile" />
+                  <MenuUserPanel href="#" name="Settings" />
+                  <MenuUserPanel href="#" name="Log Out" />
                 </div>
               </div>
             </li>
