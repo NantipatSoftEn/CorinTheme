@@ -4,7 +4,8 @@ import SelectBox from "./shared/SelectBox";
 import DateForm from "./shared/DateForm";
 import Title from "./shared/Title";
 import { mentors, groups, status } from "./mock/option";
-import useInput from "./hook/useInput ";
+import useInput from "./hook/useInput";
+import useInputDate from "./hook/useInputDate";
 
 const Forms = () => {
   const {
@@ -35,14 +36,14 @@ const Forms = () => {
   const { value: Ability, bind: bindAbility, reset: resetAbility } = useInput(
     "กระโดดตบ"
   );
-  const { value: Mentor, bind: bindMentor, reset: resetMentor } = useInput("");
-  const { value: Group, bind: bindGroup, reset: resetGroup } = useInput("");
-  const { value: Status, bind: bindStatus, reset: resetStatus } = useInput("");
+  const { value: Mentor, bind: bindMentor, reset: resetMentor } = useInput(0);
+  const { value: Group, bind: bindGroup, reset: resetGroup } = useInput(0);
+  const { value: Status, bind: bindStatus, reset: resetStatus } = useInput(0);
   const {
-    value: DateBelieve,
+    startDate: DateBelieve,
     bind: bindDateBelieve,
     reset: resetDateBelieve,
-  } = useInput("");
+  } = useInputDate(new Date());
   const {
     value: Position,
     bind: bindPosition,
@@ -85,6 +86,7 @@ const Forms = () => {
     resetAbility();
     resetMentor();
     resetGroup();
+    resetStatus();
     resetDateBelieve();
 
     resetPosition();
@@ -119,7 +121,7 @@ const Forms = () => {
           <SelectBox label="พี่เลี้ยง" test={mentors} hook={bindMentor} />
           <SelectBox label="กลุ่มแคร์" test={groups} hook={bindGroup} />
           <SelectBox label="ระดับความเชื่อ" test={status} hook={bindStatus} />
-          <DateForm label="วันที่เชื่อ" hook={bindDateBelieve} />
+          <DateForm label="วันที่เชื่อ" hook={bindDateBelieve} selected={DateBelieve}/>
         </div>
         <p className="mt-8 font-bold">ข้อมูลอาชีพ</p>
         <div className="flex flex-wrap  mb-2">
