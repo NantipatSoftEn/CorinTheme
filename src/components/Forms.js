@@ -7,7 +7,7 @@ import { mentors, groups, status } from "./mock/option";
 import useInput from "./hook/useInput";
 import useInputDate from "./hook/useInputDate";
 
-const Forms = ({ state, props }) => {
+const Forms = ({ Users, addUser }) => {
   const { value: firstName, bind: bindfirstName, reset: resetfirstName } = useInput("army");
   const { value: lastName, bind: bindlastName, reset: resetlastName } = useInput("god");
   const { value: nickName, bind: bindnickName, reset: resetnickName } = useInput("inw");
@@ -26,7 +26,7 @@ const Forms = ({ state, props }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    const User = {
+    const data = {
       firstName: firstName,
       lastName: lastName,
       nickName: nickName,
@@ -44,8 +44,7 @@ const Forms = ({ state, props }) => {
       Salary: Salary,
       Where: Where,
     };
-    console.log(User);
-
+    addUser(data);
     resetfirstName();
     resetlastName();
     resetnickName();
@@ -53,13 +52,11 @@ const Forms = ({ state, props }) => {
     resetFacebook();
     resetTel();
     resetAddress();
-
     resetAbility();
     resetMentor();
     resetGroup();
     resetStatus();
     resetDateBelieve();
-
     resetPosition();
     resetSalary();
     resetWhere();

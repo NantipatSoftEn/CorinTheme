@@ -5,11 +5,12 @@ import "./App.css";
 import Main from "./views/layout/Main";
 import Cards from "./components/Cards";
 import Forms from "./components/Forms";
+import FormsContainner from "./container/FormsContainner";
 import Table from "./components/Table";
 import generateMain from "./hoc/generateMain";
 const history = createBrowserHistory();
 const CardWithLayout = generateMain(Cards);
-const FormsWithLayout = generateMain(Forms);
+const FormsWithLayout = generateMain(FormsContainner);
 const TableWithLayout = generateMain(Table);
 function App() {
   return (

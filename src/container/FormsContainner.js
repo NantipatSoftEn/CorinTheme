@@ -4,7 +4,7 @@ import { addUser } from "../actions/Users";
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user,
+    Users: state.Users,
   };
 };
 
