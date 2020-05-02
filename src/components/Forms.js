@@ -7,7 +7,7 @@ import { mentors, groups, status } from "./mock/option";
 import useInput from "./hook/useInput";
 import useInputDate from "./hook/useInputDate";
 
-const Forms = () => {
+const Forms = ({ state, props }) => {
   const {
     value: firstName,
     bind: bindfirstName,
@@ -53,32 +53,36 @@ const Forms = () => {
   const { value: Salary, bind: bindSalary, reset: resetSalary } = useInput(
     "180000"
   );
-
   const { value: Where, bind: bindWhere, reset: resetWhere } = useInput(
     "ไม่บอก"
   );
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log(firstName);
-    console.log(lastName);
-    console.log(nickName);
-    console.log(Facebook);
-    console.log(Tel);
-    console.log(Address);
-    console.log(Ability);
-    console.log(Mentor);
-    console.log(Group);
-    console.log(Status);
-    console.log(DateBelieve);
-    console.log(Position);
-    console.log(Salary);
-    console.log(Where);
+    const User = {
+      firstName: firstName,
+      lastName: lastName,
+      nickName: nickName,
+      Age: Age,
+      Facebook: Facebook,
+      Tel: Tel,
+      Address: Address,
+      Ability: Ability,
+      Ability: Ability,
+      Mentor: Mentor,
+      Group: Group,
+      Status: Status,
+      DateBelieve: DateBelieve,
+      Position: Position,
+      Salary: Salary,
+      Where: Where,
+    };
+    console.log(User);
 
     resetfirstName();
     resetlastName();
     resetnickName();
-
+    resetAge();
     resetFacebook();
     resetTel();
     resetAddress();
@@ -121,7 +125,11 @@ const Forms = () => {
           <SelectBox label="พี่เลี้ยง" test={mentors} hook={bindMentor} />
           <SelectBox label="กลุ่มแคร์" test={groups} hook={bindGroup} />
           <SelectBox label="ระดับความเชื่อ" test={status} hook={bindStatus} />
-          <DateForm label="วันที่เชื่อ" hook={bindDateBelieve} selected={DateBelieve}/>
+          <DateForm
+            label="วันที่เชื่อ"
+            hook={bindDateBelieve}
+            selected={DateBelieve}
+          />
         </div>
         <p className="mt-8 font-bold">ข้อมูลอาชีพ</p>
         <div className="flex flex-wrap  mb-2">

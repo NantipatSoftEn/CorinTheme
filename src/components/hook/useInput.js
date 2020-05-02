@@ -9,7 +9,7 @@ const useInput = (initialValue) => {
     bind: {
       value,
       onChange: (event) => {
-        setValue(event);
+        setValue(event.target.value);
       },
     },
   };
