@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({title, value, color,icon,iconColor}) => {
+const Card = ({ title, value, color, icon, iconColor }) => {
   return (
     <div className="w-full md:w-1/2 xl:w-1/3 p-3">
       <div className={"bg-green-100 border-b-4 rounded-lg shadow-lg p-5 " + color}>

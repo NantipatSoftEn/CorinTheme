@@ -3,9 +3,7 @@ import React from "react";
 const FormIcon = () => {
   return (
     <div className="w-full md:w-1/5 px-3 md:mb-0 mt-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-xs mb-2">
-        ค้นหา
-      </label>
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-xs mb-2">ค้นหา</label>
       <div className="block relative">
         <span className="h-full absolute inset-y-0 left-0 flex items-center pl-2">
           <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current text-gray-500">

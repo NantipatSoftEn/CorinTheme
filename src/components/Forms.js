@@ -8,54 +8,21 @@ import useInput from "./hook/useInput";
 import useInputDate from "./hook/useInputDate";
 
 const Forms = ({ state, props }) => {
-  const {
-    value: firstName,
-    bind: bindfirstName,
-    reset: resetfirstName,
-  } = useInput("army");
-  const {
-    value: lastName,
-    bind: bindlastName,
-    reset: resetlastName,
-  } = useInput("god");
-  const {
-    value: nickName,
-    bind: bindnickName,
-    reset: resetnickName,
-  } = useInput("inw");
+  const { value: firstName, bind: bindfirstName, reset: resetfirstName } = useInput("army");
+  const { value: lastName, bind: bindlastName, reset: resetlastName } = useInput("god");
+  const { value: nickName, bind: bindnickName, reset: resetnickName } = useInput("inw");
   const { value: Age, bind: bindAge, reset: resetAge } = useInput("22");
-  const {
-    value: Facebook,
-    bind: bindFacebook,
-    reset: resetFacebook,
-  } = useInput("facebook/army");
+  const { value: Facebook, bind: bindFacebook, reset: resetFacebook } = useInput("facebook/army");
   const { value: Tel, bind: bindTel, reset: resetTel } = useInput("093580486");
-  const { value: Address, bind: bindAddress, reset: resetAddress } = useInput(
-    "9/1 กะทู้"
-  );
-  const { value: Ability, bind: bindAbility, reset: resetAbility } = useInput(
-    "กระโดดตบ"
-  );
+  const { value: Address, bind: bindAddress, reset: resetAddress } = useInput("9/1 กะทู้");
+  const { value: Ability, bind: bindAbility, reset: resetAbility } = useInput("กระโดดตบ");
   const { value: Mentor, bind: bindMentor, reset: resetMentor } = useInput(0);
   const { value: Group, bind: bindGroup, reset: resetGroup } = useInput(0);
   const { value: Status, bind: bindStatus, reset: resetStatus } = useInput(0);
-  const {
-    startDate: DateBelieve,
-    bind: bindDateBelieve,
-    reset: resetDateBelieve,
-  } = useInputDate(new Date());
-  const {
-    value: Position,
-    bind: bindPosition,
-    reset: resetPosition,
-  } = useInput("ขายน้ำ");
-
-  const { value: Salary, bind: bindSalary, reset: resetSalary } = useInput(
-    "180000"
-  );
-  const { value: Where, bind: bindWhere, reset: resetWhere } = useInput(
-    "ไม่บอก"
-  );
+  const { startDate: DateBelieve, bind: bindDateBelieve, reset: resetDateBelieve } = useInputDate(new Date());
+  const { value: Position, bind: bindPosition, reset: resetPosition } = useInput("ขายน้ำ");
+  const { value: Salary, bind: bindSalary, reset: resetSalary } = useInput("180000");
+  const { value: Where, bind: bindWhere, reset: resetWhere } = useInput("ไม่บอก");
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -112,12 +79,7 @@ const Forms = ({ state, props }) => {
         <div className="flex flex-wrap  mb-6 mt-3">
           <Form label="facebook" type="text" hook={bindFacebook} />
           <Form label="เบอร์มือถือ" type="number" hook={bindTel} />
-          <Form
-            label="ที่อยู่"
-            test="กะทู้แลน"
-            type="text"
-            hook={bindAddress}
-          />
+          <Form label="ที่อยู่" test="กะทู้แลน" type="text" hook={bindAddress} />
           <Form label="ความสามารถพิเศษ" type="text" hook={bindAbility} />
         </div>
         <p className="mt-8 font-bold">ข้อมูลฝ่ายวิญญาณ</p>
@@ -125,11 +87,7 @@ const Forms = ({ state, props }) => {
           <SelectBox label="พี่เลี้ยง" test={mentors} hook={bindMentor} />
           <SelectBox label="กลุ่มแคร์" test={groups} hook={bindGroup} />
           <SelectBox label="ระดับความเชื่อ" test={status} hook={bindStatus} />
-          <DateForm
-            label="วันที่เชื่อ"
-            hook={bindDateBelieve}
-            selected={DateBelieve}
-          />
+          <DateForm label="วันที่เชื่อ" hook={bindDateBelieve} selected={DateBelieve} />
         </div>
         <p className="mt-8 font-bold">ข้อมูลอาชีพ</p>
         <div className="flex flex-wrap  mb-2">

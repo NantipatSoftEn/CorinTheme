@@ -1,19 +1,21 @@
-import { connect } from 'react-redux'
-import Forms from '../components/Forms'
-import {addUser} from '../actions/Users'
+import { connect } from "react-redux";
+import Forms from "../components/Forms";
+import { addUser } from "../actions/Users";
 
-const mapStateToProps = state => {
-    return {
-        user: state.user
-    }
-}
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        addUser : data => {dispatch(addUser(data))}
-    }
-}
+  return {
+    addUser: (data) => {
+      dispatch(addUser(data));
+    },
+  };
+};
 
-const FormsContainner = connect(mapStateToProps,mapDispatchToProps)(Forms)
+const FormsContainner = connect(mapStateToProps, mapDispatchToProps)(Forms);
 
-export default FormsContainner
+export default FormsContainner;

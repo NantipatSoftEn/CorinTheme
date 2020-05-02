@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const DateForm = ({ label,hook,selected }) => {
+const DateForm = ({ label, hook, selected }) => {
   return (
     <div className="w-full md:w-1/5 px-3 md:mb-0 mt-3">
-      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-xs mb-2">
-        {label}
-      </label>
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold text-xs mb-2">{label}</label>
       <DatePicker
         showPopperArrow={false}
         selected={selected}
