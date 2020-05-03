@@ -1,6 +1,10 @@
 import React from "react";
 
 const RowsUser = ({ index, user, editUser, delUser }) => {
+  const handleEditClick =  (id) => {
+    editUser(id);
+    
+  }
   return (
     <React.Fragment>
       <tr>
@@ -32,7 +36,8 @@ const RowsUser = ({ index, user, editUser, delUser }) => {
             ดูข้อมูล
           </button>{" "} */}
           <button
-            onClick={() => editUser(index)}
+            href="edit"
+            onClick={() => handleEditClick(index)}
             className="bg-yellow-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
             แก้ไข
           </button>{" "}

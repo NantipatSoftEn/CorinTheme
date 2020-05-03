@@ -6,7 +6,9 @@ import Colume from "./shared/Colume";
 import RowsUser from "./shared/RowsUser";
 import { data } from "./mock/table";
 
-const Table = ({User,editUser,delUser}) => {
+const Table = (props,{User,editUser,delUser}) => {
+  console.log(`props`,props);
+  
   return (
     <React.Fragment>
       <Title name="Table" />
