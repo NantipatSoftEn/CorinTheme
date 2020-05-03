@@ -6,9 +6,9 @@ import Colume from "./shared/Colume";
 import RowsUser from "./shared/RowsUser";
 import { data } from "./mock/table";
 
-const Table = (props,{User,editUser,delUser}) => {
-  console.log(`props`,props);
-  
+const Table = (props) => {
+  console.log(`props=`, props);
+
   return (
     <React.Fragment>
       <Title name="Table" />
@@ -31,7 +31,14 @@ const Table = (props,{User,editUser,delUser}) => {
             </thead>
             <tbody>
               {data.map((user, i) => (
-                <RowsUser key={i} index={i} user={user} editUser={editUser} delUser={delUser} />
+                <RowsUser
+                  key={i}
+                  index={i}
+                  user={user}
+                  editUser={props.dispatchEditUser}
+                  delUser={props.dispatchDelUser}
+                  history={props.history}
+                />
               ))}
             </tbody>
           </table>

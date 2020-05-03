@@ -9,7 +9,7 @@ import useInputDate from "./hook/useInputDate";
 import Alert from "../components/shared/Alert";
 
 const Forms = (props) => {
-  
+
   const [isOpenAlert, setOpenAlert] = useState(false);
   const { value: firstName, bind: bindfirstName, reset: resetfirstName } = useInput("army");
   const { value: lastName, bind: bindlastName, reset: resetlastName } = useInput("god");
@@ -48,7 +48,7 @@ const Forms = (props) => {
       Salary: Salary,
       Where: Where,
     };
-    props.addUser(data);
+    props.dispatchAddUser(data);
     
     setOpenAlert(true);
     resetfirstName();
