@@ -47,7 +47,7 @@ const Forms = ({ Users, addUser }) => {
       Salary: Salary,
       Where: Where,
     };
-    addUser(data);
+    addUser(data); 
     setOpenAlert(true);
     resetfirstName();
     resetlastName();

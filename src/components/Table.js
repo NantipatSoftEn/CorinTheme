@@ -3,10 +3,10 @@ import Title from "./shared/Title";
 import SelectBox from "./shared/SelectBox";
 import FormIcon from "./shared/FormIcon";
 import Colume from "./shared/Colume";
-import Row from "./shared/Row";
+import RowsUser from "./shared/RowsUser";
 import { data } from "./mock/table";
 
-const Table = () => {
+const Table = ({User}) => {
   return (
     <React.Fragment>
       <Title name="Table" />
@@ -24,19 +24,12 @@ const Table = () => {
                 <Colume name="Role" />
                 <Colume name="Created at" />
                 <Colume name="Status" />
+                <Colume name="Action" />
               </tr>
             </thead>
             <tbody>
-              {data.map((key, i) => (
-                <Row
-                  key={i}
-                  img={key.img}
-                  name={key.name}
-                  role={key.role}
-                  date={key.date}
-                  status={key.status}
-                  color={key.color}
-                />
+              {data.map((user, i) => (
+                <RowsUser key={i} user={user} />
               ))}
             </tbody>
           </table>
