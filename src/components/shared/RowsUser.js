@@ -1,10 +1,10 @@
 import React from "react";
 
-const RowsUser = ({ index, user, editUser, delUser }) => {
-  const handleEditClick =  (id) => {
+const RowsUser = ({ index, user, editUser, delUser, history }) => {
+  const handleEditClick = (id) => {
     editUser(id);
-    
-  }
+    history.push(`/form/${id}/edit`);
+  };
   return (
     <React.Fragment>
       <tr>
