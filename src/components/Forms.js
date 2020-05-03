@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "./shared/Form";
 import SelectBox from "./shared/SelectBox";
 import DateForm from "./shared/DateForm";
@@ -6,8 +6,10 @@ import Title from "./shared/Title";
 import { mentors, groups, status } from "./mock/option";
 import useInput from "./hook/useInput";
 import useInputDate from "./hook/useInputDate";
+import Alert from "../components/shared/Alert";
 
 const Forms = ({ Users, addUser }) => {
+  const [isOpenAlert, setOpenAlert] = useState(false);
   const { value: firstName, bind: bindfirstName, reset: resetfirstName } = useInput("army");
   const { value: lastName, bind: bindlastName, reset: resetlastName } = useInput("god");
   const { value: nickName, bind: bindnickName, reset: resetnickName } = useInput("inw");
@@ -23,6 +25,7 @@ const Forms = ({ Users, addUser }) => {
   const { value: Position, bind: bindPosition, reset: resetPosition } = useInput("ขายน้ำ");
   const { value: Salary, bind: bindSalary, reset: resetSalary } = useInput("180000");
   const { value: Where, bind: bindWhere, reset: resetWhere } = useInput("ไม่บอก");
+  const isOpen = false;
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -45,6 +48,7 @@ const Forms = ({ Users, addUser }) => {
       Where: Where,
     };
     addUser(data);
+    setOpenAlert(true);
     resetfirstName();
     resetlastName();
     resetnickName();
@@ -65,6 +69,7 @@ const Forms = ({ Users, addUser }) => {
   return (
     <React.Fragment>
       <Title name="Form" />
+      {isOpenAlert ? <Alert /> : ""}
       <form className="mx-8" onSubmit={handleSubmit}>
         <p className="mt-8 font-bold">ข้อมูลทั่วไป</p>
         <div className="flex flex-wrap mb-6 mt-3">
