@@ -16,7 +16,7 @@ function App() {
       <Router history={history}>
         <Route exact path="/" component={Main} />
         <Route exact path="/form" component={FormsWithLayout} />
-        <Route exact path="/edit" component={FormsWithLayout} />
+        <Route exact path="/form/:id/edit" component={FormsWithLayout} />
         <Route exact path="/card" component={CardWithLayout} />
         <Route exact path="/table" component={TableWithLayout} />
       </Router>
