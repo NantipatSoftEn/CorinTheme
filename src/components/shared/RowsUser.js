@@ -5,6 +5,10 @@ const RowsUser = ({ index, user, editUser, delUser, history }) => {
     editUser(id);
     history.push(`/form/${id}/edit`);
   };
+  const handleDelClick = (id) => {
+    delUser(id);
+    //history.push(`/form/${id}/edit`);
+  };
   return (
     <React.Fragment>
       <tr>
@@ -42,7 +46,7 @@ const RowsUser = ({ index, user, editUser, delUser, history }) => {
             แก้ไข
           </button>{" "}
           <button
-            onClick={() => delUser(index)}
+            onClick={() => handleDelClick(index)}
             className="bg-red-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
             ลบ
           </button>
