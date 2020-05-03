@@ -1,6 +1,6 @@
 import React from "react";
 
-const RowsUser = ({ key, user}) => {
+const RowsUser = ({ index, user, editUser, delUser }) => {
   return (
     <React.Fragment>
       <tr>
@@ -28,13 +28,17 @@ const RowsUser = ({ key, user}) => {
           </span>
         </td>
         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-          <button className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+          {/* <button className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
             ดูข้อมูล
-          </button>{" "}
-          <button className="bg-yellow-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+          </button>{" "} */}
+          <button
+            onClick={() => editUser(index)}
+            className="bg-yellow-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
             แก้ไข
           </button>{" "}
-          <button className="bg-red-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+          <button
+            onClick={() => delUser(index)}
+            className="bg-red-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
             ลบ
           </button>
         </td>

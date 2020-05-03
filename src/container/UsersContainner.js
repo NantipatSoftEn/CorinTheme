@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Forms from "../components/Forms";
 import Table from "../components/Table";
-import { addUser,editUser } from "../actions/Users";
+import { addUser,editUser,delUser } from "../actions/Users";
 
 const mapStateToProps = (state) => {
   return {
@@ -17,7 +17,9 @@ const mapDispatchToProps = (dispatch) => {
     editUser: (id) => {
       dispatch(editUser(id));
     },
-    
+    delUser:(id)=>{
+      dispatch(delUser(id));
+    }
   };
 };
 
