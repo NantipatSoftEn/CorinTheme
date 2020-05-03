@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import Forms from "../components/Forms";
 import Table from "../components/Table";
-import { addUser,editUser,delUser } from "../actions/Users";
+import { addUser, editUser, delUser } from "../actions/Users";
 
 const mapStateToProps = (state) => {
   return {
@@ -11,22 +11,22 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addUser: (data) => {
+    dispatchAddUser: (data) => {
       dispatch(addUser(data));
     },
-    editUser: (id) => {
+    dispatchEditUser: (id) => {
       dispatch(editUser(id));
     },
-    delUser:(id)=>{
+    dispatchDelUser: (id) => {
       dispatch(delUser(id));
-    }
+    },
   };
 };
 
 const FormsWithLogic = connect(mapStateToProps, mapDispatchToProps)(Forms);
-const TableWithLogic  = connect(mapStateToProps, mapDispatchToProps)(Table);
+const TableWithLogic = connect(mapStateToProps, mapDispatchToProps)(Table);
 
 export default {
   FormsWithLogic,
-  TableWithLogic
-}
+  TableWithLogic,
+};
