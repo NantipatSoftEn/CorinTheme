@@ -4,14 +4,12 @@ import { createBrowserHistory } from "history";
 import "./App.css";
 import Main from "./views/layout/Main";
 import Cards from "./components/Cards";
-import Forms from "./components/Forms";
-import FormsContainner from "./container/FormsContainner";
-import Table from "./components/Table";
+import UsersContainner from "./container/UsersContainner";
 import generateMain from "./hoc/generateMain";
 const history = createBrowserHistory();
 const CardWithLayout = generateMain(Cards);
-const FormsWithLayout = generateMain(FormsContainner);
-const TableWithLayout = generateMain(Table);
+const FormsWithLayout = generateMain(UsersContainner.FormsWithLogic);
+const TableWithLayout = generateMain(UsersContainner.TableWithLogic);
 function App() {
   return (
     <div>

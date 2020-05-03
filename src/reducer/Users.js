@@ -1,7 +1,4 @@
-const Users = (state = [], action) => { 
-  console.log(`action=`,action);
-  console.log(`concat=`,state.concat([action.data]));
-  
+const Users = (state = [], action) => {   
   switch (action.type) {
     case "ADD_USER":    
       return state.concat([action.data]);
