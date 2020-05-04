@@ -8,7 +8,7 @@ const Navbar = () => {
         <ul className="list-reset flex flex-row md:flex-col py-0 md:py-3 px-1 md:px-2 text-center md:text-left">
           <Menu href="/form" name="Form" icon="fas fa-tasks pr-0 md:pr-3" />
           <Menu href="/card" name="Card" icon="fa fa-envelope pr-0 md:pr-3" />
-          <Menu href="/table" name="ตาราง" icon="fas fa-chart-area pr-0 md:pr-3" />
+          <Menu href="/board" name="ตาราง" icon="fas fa-chart-area pr-0 md:pr-3" />
           <Menu href="#" name="Payments" icon="fa fa-wallet pr-0 md:pr-3" />
         </ul>
       </div>

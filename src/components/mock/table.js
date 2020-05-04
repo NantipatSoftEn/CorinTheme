@@ -1,3 +1,21 @@
+export const columes = [
+  {
+    name: "User",
+  },
+  {
+    name: "Role",
+  },
+  {
+    name: "Created at",
+  },
+  {
+    name: "Status",
+  },
+  {
+    name: "Action",
+  },
+];
+
 export const data = [
   {
     img:
