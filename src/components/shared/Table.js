@@ -1,15 +1,17 @@
 import React from "react";
 import Colume from "./Colume";
 import RowsUser from "./RowsUser";
+import { useTable } from "react-table";
 
-const Table = ({ columes, data, props }) => {
+const Table = ({ columns, data, props }) => {
+
   return (
     <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
       <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
         <table className="min-w-full leading-normal">
           <thead>
             <tr>
-              {columes.map((colume, i) => (
+              {columns.map((colume, i) => (
                 <Colume key={i} name={colume.name} />
               ))}
             </tr>

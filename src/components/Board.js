@@ -4,12 +4,10 @@ import SelectBox from "./shared/SelectBox";
 import FormIcon from "./shared/FormIcon";
 import Colume from "./shared/Colume";
 import RowsUser from "./shared/RowsUser";
-import { columes, data } from "./mock/table";
+import { columns, data } from "./mock/table";
 import Table from "./shared/Table";
 
 const Board = (props) => {
-  console.log(`props=`, props);
-
   return (
     <React.Fragment>
       <Title name="Table" />
@@ -18,7 +16,7 @@ const Board = (props) => {
         <SelectBox label="Filter" test={["Active", "Inactive"]} />
         <FormIcon />
       </div>
-      <Table columes={columes} data={data} props={props}/>
+      <Table columns={columns} data={data} props={props}/>
     </React.Fragment>
   );
 };

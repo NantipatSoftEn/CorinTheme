@@ -1,4 +1,4 @@
-export const columes = [
+export const columns = [
   {
     name: "User",
   },
