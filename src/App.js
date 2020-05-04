@@ -9,7 +9,7 @@ import generateMain from "./hoc/generateMain";
 const history = createBrowserHistory();
 const CardWithLayout = generateMain(Cards);
 const FormsWithLayout = generateMain(UsersContainner.FormsWithLogic);
-const TableWithLayout = generateMain(UsersContainner.TableWithLogic);
+const BoardWithLayout = generateMain(UsersContainner.BoardWithLogic);
 function App() {
   return (
     <div>
@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/" component={Main} />
         <Route exact path="/form" component={FormsWithLayout} />
         <Route exact path="/card" component={CardWithLayout} />
-        <Route exact path="/table" component={TableWithLayout} />
+        <Route exact path="/board" component={BoardWithLayout} />
         <Route exact path="/form/:id/edit" component={FormsWithLayout} />
       </Router>
     </div>

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Forms from "../components/Forms";
-import Table from "../components/Table";
+import Board from "../components/Board";
 import { addUser, editUser, delUser } from "../actions/Users";
 
 const mapStateToProps = (state) => {
@@ -24,9 +24,9 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const FormsWithLogic = connect(mapStateToProps, mapDispatchToProps)(Forms);
-const TableWithLogic = connect(mapStateToProps, mapDispatchToProps)(Table);
+const BoardWithLogic = connect(mapStateToProps, mapDispatchToProps)(Board);
 
 export default {
   FormsWithLogic,
-  TableWithLogic,
+  BoardWithLogic,
 };

@@ -6,7 +6,7 @@ import Colume from "./shared/Colume";
 import RowsUser from "./shared/RowsUser";
 import { data } from "./mock/table";
 
-const Table = (props) => {
+const Board = (props) => {
   console.log(`props=`, props);
 
   return (
@@ -59,4 +59,4 @@ const Table = (props) => {
   );
 };
 
-export default Table;
+export default Board;
