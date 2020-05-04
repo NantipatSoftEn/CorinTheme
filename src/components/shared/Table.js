@@ -2,15 +2,15 @@ import React from "react";
 import Colume from "./Colume";
 import RowsUser from "./RowsUser";
 
-const Table = (columes, data, props) => {
+const Table = ({ columes, data, props }) => {
   return (
     <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
       <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
         <table className="min-w-full leading-normal">
           <thead>
             <tr>
-              {columes.map((colume) => (
-                <Colume name={colume.name} />
+              {columes.map((colume, i) => (
+                <Colume key={i} name={colume.name} />
               ))}
             </tr>
           </thead>

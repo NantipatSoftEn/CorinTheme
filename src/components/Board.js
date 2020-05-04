@@ -18,7 +18,7 @@ const Board = (props) => {
         <SelectBox label="Filter" test={["Active", "Inactive"]} />
         <FormIcon />
       </div>
-      <Table />
+      <Table columes={columes} data={data} props={props}/>
     </React.Fragment>
   );
 };
