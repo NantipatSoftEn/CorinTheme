@@ -1,23 +1,31 @@
-export const columns = [
+import React from 'react';
+export const columnsMock = [
   {
-    name: "User",
+    Header: "Name",
+    accessor: "name",
+    Cell: ({ cell: { value } }) => <p className="text-gray-900 whitespace-no-wrap">{value}</p>
   },
   {
-    name: "Role",
+    Header: "Role",
+    accessor: "role",
   },
   {
-    name: "Created at",
+    Header: "Created at",
+    accessor: "date",
   },
   {
-    name: "Status",
+    Header: "Status",
+    accessor: "status",
   },
   {
-    name: "Action",
+    Header: "Action",
+    accessor: "action",
   },
 ];
 
 export const data = [
   {
+    id: 1,
     img:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80",
     name: "Vera Carpenter",
@@ -27,6 +35,7 @@ export const data = [
     color: "bg-green-200",
   },
   {
+    id: 2,
     img:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80",
     name: "Blake Bowman",
@@ -36,6 +45,7 @@ export const data = [
     color: "bg-green-200",
   },
   {
+    id: 3,
     img:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80",
     name: "Dana Moore",
@@ -45,6 +55,7 @@ export const data = [
     color: "bg-orange-200",
   },
   {
+    id: 4,
     img:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80",
     name: "คนไทย",
