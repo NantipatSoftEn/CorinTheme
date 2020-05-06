@@ -1,4 +1,5 @@
 import React from "react";
+import Amp from '../asset/img/amp.jpg'
 const Maintenance = () => {
   return (
     <React.Fragment>
@@ -6,7 +7,7 @@ const Maintenance = () => {
         <div class="text-center text-5xl">
         🚧 กำลังทำพัฒนาอยู่จ้า 🚧
         </div>
-        <img class="object-scale-down h-64 w-full ..." src="/img/amp.jpg" />
+        <img class="object-scale-down h-64 w-full ..." src={Amp} />
       </div>
     </React.Fragment>
   );

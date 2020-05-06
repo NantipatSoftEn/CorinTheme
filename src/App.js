@@ -4,6 +4,7 @@ import { createBrowserHistory } from "history";
 import "./App.css";
 import Main from "./views/layout/Main";
 import Cards from "./components/Cards";
+import CardBlog from "./components/shared/CardBlog";
 import UsersContainner from "./container/UsersContainner";
 import generateMain from "./hoc/generateMain";
 import Maintenance from "./components/Maintenance";
@@ -11,6 +12,8 @@ const history = createBrowserHistory();
 const CardWithLayout = generateMain(Cards);
 const BoardWithLayout = generateMain(UsersContainner.BoardWithLogic);
 const FormsWithLayout = generateMain(UsersContainner.FormsWithLogic);
+const CardBlogWithLayout = generateMain(CardBlog);
+
 const MaintenanceWithLayout = generateMain(Maintenance);
 
 function App() {
@@ -25,6 +28,7 @@ function App() {
         <Route exact path="/profile" component={MaintenanceWithLayout} />
         <Route exact path="/settings" component={MaintenanceWithLayout} />
         <Route exact path="/logout" component={MaintenanceWithLayout} />
+        <Route exact path="/blog" component={CardBlogWithLayout} />
       </Router>
     </div>
   );
