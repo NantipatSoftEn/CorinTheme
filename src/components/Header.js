@@ -64,9 +64,9 @@ const Header = () => {
                     "dropdownlist absolute bg-gray-900 text-white right-0 mt-3 p-3 overflow-auto z-30 " +
                     (visible ? "" : "invisible")
                   }>
-                  <MenuUserPanel href="#" name="Profile" />
-                  <MenuUserPanel href="#" name="Settings" />
-                  <MenuUserPanel href="#" name="Log Out" />
+                  <MenuUserPanel href="/profile" name="Profile" />
+                  <MenuUserPanel href="/settings" name="Settings" />
+                  <MenuUserPanel href="/logout" name="Log Out" />
                 </div>
               </div>
             </li>
