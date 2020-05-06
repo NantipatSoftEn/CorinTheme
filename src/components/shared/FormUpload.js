@@ -23,6 +23,7 @@ class FormUpload extends React.Component {
         imgExtension={[".jpg", ".gif", ".png", ".gif"]}
         maxFileSize={5242880}
         withPreview={true}
+        singleImage={true}
       />
     );
   }
