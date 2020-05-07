@@ -6,31 +6,45 @@ const CardBlog = () => {
   const mock = "https://tailwindcss.com/img/card-left.jpg";
   const mockpf = "https://tailwindcss.com/img/jonathan.jpg";
   return (
-    <div className="mx-20 my-20">
-      <div class="max-w-sm w-full lg:max-w-full lg:flex">
-        <div
-          class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center"
-          style={{ "background-image": `url(${Amp})` }}
-          title="Woman holding a mug"></div>
-        <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-          <div class="mb-8">
-            <p class="text-sm text-gray-600 flex items-center">🔒 Private</p>
-            <div class="text-gray-900 font-bold text-xl mb-2">การเอาตัวรอดในยุคกันดาร</div>
-            <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
-              eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque,
-              exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-              quia, nulla! Maiores et perferendis
-            </p>
+    <div className="flex flex-wrap mx-8 mb-6 mt-3">
+      <div class="max-w-4xl px-10 my-4 py-6 bg-white rounded-lg shadow-md">
+        <div class="flex justify-between items-center">
+          <span class="font-light text-gray-600">6 ตุลาคม 2020</span>
+          <div class="px-6 pb-2">
+            <span class="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+              #photography
+            </span>
+            <span class="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+              #travel
+            </span>
+            <span class="inline-block bg-pink-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+              #winter
+            </span>
           </div>
-          <div class="flex items-center">
-            <img class="w-10 h-10 rounded-full mr-4" src={mockpf} alt="Avatar of Jonathan Reinink" />
-            <div class="text-sm">
-              <p class="text-gray-900 leading-none">write by Army</p>
-              <p class="text-gray-600">วันที่ 6 เดือนพฤษภาคม 2563</p>
-            </div>
+        </div>
+        <div class="mt-2">
+          <a class="text-2xl text-gray-700 font-bold hover:text-gray-600" href="#">
+            ความแม่นนำในการออกแบบของนักพัฒนา
+          </a>
+          <p class="mt-2 text-gray-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora expedita dicta totam aspernatur
+            doloremque. Excepturi iste iusto eos enim reprehenderit nisi, accusamus delectus nihil quis facere in modi
+            ratione libero!
+          </p>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+          <a class="text-blue-600 hover:underline" href="#">
+            Read more
+          </a>
+          <div>
+            <a class="flex items-center" href="#">
+              <img
+                class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
+                src="https://images.unsplash.com/photo-1502980426475-b83966705988?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=373&q=80"
+                alt="avatar"
+              />
+              <h1 class="text-gray-700 font-bold">อาร์มเอง</h1>
+            </a>
           </div>
         </div>
       </div>

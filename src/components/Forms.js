@@ -7,9 +7,9 @@ import { mentors, groups, status } from "./mock/option";
 import useInput from "./hook/useInput";
 import useInputDate from "./hook/useInputDate";
 import Alert from "../components/shared/Alert";
+import FormUpload from "../components/shared/FormUpload";
 
 const Forms = (props) => {
-
   const [isOpenAlert, setOpenAlert] = useState(false);
   const { value: firstName, bind: bindfirstName, reset: resetfirstName } = useInput("army");
   const { value: lastName, bind: bindlastName, reset: resetlastName } = useInput("god");
@@ -49,7 +49,7 @@ const Forms = (props) => {
       Where: Where,
     };
     props.dispatchAddUser(data);
-    
+
     setOpenAlert(true);
     resetfirstName();
     resetlastName();
@@ -98,6 +98,12 @@ const Forms = (props) => {
           <Form label="อาชีพ" type="text" hook={bindPosition} />
           <Form label="รายได้" type="number" hook={bindSalary} />
           <Form label="ทำที่ไหน" type="text" hook={bindWhere} />
+        </div>
+        <div className="flex flex-wrap mb-6 mt-3">
+          <div className="w-full md:w-1/2 px-4 md:mb-0 mt-3">
+          <p className="mt-8 font-bold">เพิ่มรูปตัวเอง</p>
+            <FormUpload />
+          </div>
         </div>
         <div className="flex flex-wrap w-full">
           <div className="w-full md:w-1/2 px-4 md:mb-0 mt-3">
